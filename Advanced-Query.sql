@@ -26,3 +26,11 @@ SELECT DISTINCT cus.[CustomerName]
   left join [IDMI-Projects].[dbo_customer].[Customer] cus ON cus.CustomerID = web.CustomerID
   WHERE web.IsActive = 1 AND cus.IsActive = 1
   ORDER BY cus.[CustomerID]
+
+--Use this to execute a command then undo it to see that it's correctly executing.
+BEGIN TRAN
+--[COMMANDS GO HERE]
+--[COMMANDS GO HERE]
+--[COMMANDS GO HERE]
+--[COMMANDS GO HERE]
+ROLLBACK TRAN
